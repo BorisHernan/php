@@ -1,8 +1,37 @@
-body {
-    font-family: Arial, sans-serif;
+*{
     margin: 0;
     padding: 0;
-}
+  }
+  body{
+    font-family:Verdana;
+    background-color: #002345;
+    color: #ABCDEF;
+  }
+  h1{
+    text-align: center;
+    margin: 80px 0 20px 0;
+    color: white;
+  }
+  #subtitulo{
+    text-align: center;
+    margin-bottom: 80px;
+    color: white;
+  }
+  legend{
+    font-size: 1.7em;
+    padding: 0 7px;
+  }
+  fieldset{
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 30px;
+  }
+  #reloj{
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+  }
 
 .contenedor {
     width: 80%;
@@ -62,6 +91,12 @@ table {
 
     margin-left: auto
   }
+
+.separator{
+ text-align: center;
+ margin-top:10px;
+
+}
 
 
 .containerform {
