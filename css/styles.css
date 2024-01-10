@@ -15,15 +15,17 @@ table {
 }
 
 .label1 {
-    margin-top:30px;
+    margin-top:10px;
+    font-family: Arial, sans-serif;
     padding: 15px;
     display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(7%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
+    width: calc(8%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 
 .label2{
+    font-family: Arial, sans-serif;
     margin-top:30px;
     padding: 15px;
     display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
@@ -32,6 +34,7 @@ table {
 }
 
 .label3 {
+    font-family: Arial, sans-serif;
     margin-top:30px;
     padding: 15px;
     display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
@@ -43,7 +46,7 @@ table {
     margin-top:30px;
     padding: 15px;
     display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(8%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
+    width: calc(9%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
@@ -51,7 +54,7 @@ table {
     margin-top:30px;
     padding: 15px;
     display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(7%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
+    width: calc(9%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
@@ -59,20 +62,25 @@ table {
     margin-top:30px;
     padding: 15px;
     display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(10%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
+    width: calc(11%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 .containerimg {
     float: right; /* Alinea el elemento a la izquierda */
-    margin-right: -100px; /* Agrega un margen derecho para separar el elemento de la sección .label11 */
-    margin-top:-280px;
+    margin-right: -120px; /* Agrega un margen derecho para separar el elemento de la sección .label11 */
+    margin-top:-220px;
 }
 
 .container {
-    margin-top:130px; /* Ejemplo de margen superior para separarla de la sección anterior */
+    margin-top:30px; /* Ejemplo de margen superior para separarla de la sección anterior */
     display: inline-block;
     flex-direction: row; /* Asegura que los elementos estén en fila (horizontal) */
+}
+
+.containerform {
+    margin-top:30px; /* Ejemplo de margen superior para separarla de la sección anterior */
+
 }
 
 .label7 {
@@ -160,6 +168,16 @@ table {
     width: calc(11%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
+
+.texto-grande1 {
+    font-size: 18px; /* Puedes ajustar el valor según tus necesidades */
+    font-family: Arial, sans-serif;
+  }
+
+.texto-grande2 {
+    font-size: 22px; /* Puedes ajustar el valor según tus necesidades */
+        font-family: Arial, sans-serif;
+}    
 
 .label18 {
     padding: 10px;
