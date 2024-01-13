@@ -34,10 +34,6 @@ if (isset($_POST['buscar'])) {
 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -56,22 +52,74 @@ if (isset($_POST['buscar'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+    <script src="p5.min.js"></script>
 </head>
 
-<body>
-<link rel="stylesheet" href="css/styles.css">
-<div class="fieldset">    
-<fieldset>
+<body>  
+    <!-- CSS (estilos) -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <div  style="width: 14rem;">   
+        <?php
+        echo '<img src="img/galoisimg.png" alt="Descripción de la imagen" width="20">';
+        ?>
+        <h2 class="h2f">EVARISTE</h2>
+        <h1 class="h1f" >GALOIS</h1>
+        <h1 class="h1v2" >REGISTRO DE ASISTENCIAS</h1>
+    </div>
+
+    <!-- HTML (Estructura) -->
+
+    <div id="contenedor-reloj">
+        <!-- Se va a trabajar con multiples capas -->
+        <div id="fondo">
+        </div>
+        <div id="hora-digital">
+            <span id="texto-hora-digital">Cargando...</span>
+        </div>
+        <div id="manecillas">
+            <svg id="puntos" width="300" height="300">
+            </svg>
+            <div id="horas">
+                <svg width="300" height="300">
+                    <line x1="150" y1="50" x2="150" y2="150" stroke="black" stroke-width="6" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div id="minutos">
+                <svg width="300" height="300">
+                    <line x1="150" y1="30" x2="150" y2="150" stroke="black" stroke-width="4" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div id="segundos">
+                <svg width="300" height="300">
+                    <line x1="150" y1="30" x2="150" y2="150" stroke="red" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+            </div>  
+
+        </div>
+
+    </div>
+
+ 
+
+    <div class="fieldset">    
+    <fieldset>
     <legend id="fecha"></legend>
-    <h2 id="reloj"></h2>
-</fieldset>
-</div>  
+    </fieldset> 
+    </div>
+
+    <!-- JS (Lógica) -->
+    <script src="js/setup.js"> </script>
 
   <script src="js/ejercicio.js"></script>
 
 
-  <form method="post" class="text-center mb-3 containerform">
-    <label for="dni">Buscar por DNI (8 dígitos):</label>
+  <form method="post" class="text-center mb-3 containerform ingre">
+    <label for="dni">INSERTE DNI (8 dígitos)</label>
     <input type="text" name="dni" id="dni" pattern="[0-9]{8}" title="El DNI debe tener 8 dígitos" oninput="checkLength()" required>
     <button class="btn btn-primary" type="submit" name="buscar" id="buscarBtn" style="display:none;">Buscar</button>
 </form>
@@ -88,9 +136,7 @@ if (isset($_POST['buscar'])) {
     }
 </script>
 
-
 <div class="perfil">
-    <h1 class="containerform text-center body">Información del Alumno / Registro de Asistencia </h1>
     
     <div id="resultadosContainer" class="resultados">
         <?php
@@ -99,42 +145,48 @@ if (isset($_POST['buscar'])) {
         } else {
             foreach ($resultados as $resultado) {
         ?>
-            <div class="d-flex justify-content-between">
-                <div class="card contenedor" style="width: 14rem;">
-                <h3 class="card separator"><strong>DNI </strong><h4>
+                <h3 class="h3dni"><strong>DNI : </strong><h4>
                 
-                <h4 class="separator"><?php echo $resultado['dni']; ?></h4>
-                <h4 class="card separator" ><strong>NOMBRE COMPLETO </strong><h4>
-                    <h4 class="separator"><?php echo $resultado['apenom']; ?></h4>
-                </div>
-                <div class="card separator" style="width: 14rem;">
-                <h3 class="card separator"><strong>NIVEL EDUCATIVO </strong></h3>
-                    <div>
-                        <?php
-                            $nivel = $resultado['nivel'];
-                            
-                            if ($nivel == 'P') {
-                                echo '<h4 class="separator" >Primaria</h4>';
-                            } elseif ($nivel == 'S') {
-                                echo '<h4 class="separator" >Secundaria</h4>';
-                            } else {
-                                // Manejar otros casos si es necesario
-                                echo '<h4 class="separator">Otro Nivel</h4>';
-                            }
-                        ?>
-                    </div>
-                <h3 class="card separator"  ><strong>GRADO :</strong><h3>
-                <h4 class="separator" ><?php echo $resultado['grado']; ?></h4>
-                <h3 class="card separator"  ><strong>SECCIÓN :</strong></h3>
-                <h4 class="separator"><?php echo $resultado['seccion']; ?></h4>
+                <h4 class="h4dni"><?php echo $resultado['dni']; ?></h4>
+                <h4 class="h3alum" ><strong>ALUMNO : </strong><h4>
+                    <h4 class="h4alum"><?php echo $resultado['apenom']; ?></h4>
                 </div>
 
-                <div class="card contenedor" style="width: 14rem;">
+                <h3 class="h3gra"><strong>GRADO : </strong></h3>
+                <h4 class="h4gra">
+                    <?php 
+                        $grado = $resultado['grado'];
+
+                        switch ($grado) {
+                            case 1:
+                                echo "Primero";
+                                break;
+                            case 2:
+                                echo "Segundo";
+                                break;
+                            case 3:
+                                echo "Tercero";
+                                break;
+                            case 4:
+                                echo "Cuarto";
+                                break;
+                            case 5:
+                                echo "Quinto";
+                                break;
+                            default:
+                                echo "Grado desconocido";
+                        }
+                    ?>
+                </h4>
+                <h3 class="h3sec"  ><strong>SECCIÓN : </strong></h3>
+                <h4 class="h4sec">"<?php echo $resultado['seccion']; ?>"</h4>
+                </div>
+
+                <div class="imgh" style="width: 14rem;">
                 <img src="<?php echo $resultado['img'] ?>" class="card-img-top" alt="...">
                 <button class="btn btn-primary asistio" data-idalum="<?php echo $resultado['id']; ?>" id="buscarBtn1" style="display:none;">asitencia</button>
                 </div>
-            </div>
-            </div>
+
     <?php
         }
     }
@@ -143,13 +195,12 @@ if (isset($_POST['buscar'])) {
             <script>
                 function limpiarResultados() {
                     buscarBtn1.click();
-                    document.getElementById('resultadosContainer').innerHTML = '';
+                    var resultadosContainer = document.getElementById('resultadosContainer');
+                    resultadosContainer.style.display = 'none';
                 }
 
-                setTimeout(limpiarResultados, 2000);
+                setTimeout(limpiarResultados, 5000); // 5000 milisegundos = 5 segundos
             </script>
-
-
 
             <script>
                 $(document).ready(function(){

@@ -1,12 +1,170 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
-  body{
-    font-family:Verdana;
-    background-color: #002345;
-    color: #ABCDEF;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {   
+  font-family:Verdana;
+  color: #010c18;
+  font-family: "Cinzel", sans-serif;
+
+}
+
+.h1f{
+  margin: 50px -328px 20px 10px;
+  color: #010c18;
+  font-family: "Cinzel", sans-serif;
+}
+
+.h1v2{
+  margin: -100px -728px 30px 400px;
+  color: #010c18;
+  font-family: "Cinzel", sans-serif;
+  font-size: 4.5em;
+}
+
+.h3dni{
+  margin:  30px -728px 300px 100px;
+  color: #010c18;
+  font-family: "Cinzel", sans-serif;
+  font-size: 3em;  
+}
+
+.h4dni{
+  margin: -353px -728px 300px 250px;
+  color: #02254b;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.5em;
+}
+
+.h3alum{
+  margin:  -260px -728px 280px 90px;
+  color: #010c18;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.7em;
+}
+
+.h4alum{
+  margin: -330px 550px 300px 340px;
+  color:  #02254b;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.4em;
+}
+
+.h3gra{
+  margin:  -260px -728px 290px 90px;
+  color: #010c18;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.3em;
+}
+
+.h4gra{
+  margin: -327px 600px 300px 280px;
+  color:  #02254b;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.0em;
+}
+
+.h3sec{
+  margin:  -343px 100px 305px 450px;
+  color: #010c18;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.3em;
+
+}
+
+.h4sec{
+  margin: -345px 600px 300px 680px;
+  color:  #02254b;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.0em;
+
+}
+
+.imgh{
+  margin: -580px 600px 300px 810px;
+  color:  #02254b;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.4em;
+  border: 1px solid #000;
+}
+
+.ingre{
+  color:  #02254b;
+  font-family: "Cinzel", sans-serif;
+  font-size: 1.4em;
+}
+
+
+
+.h2f{
+
+  margin: -160px 0px -55px 200px;
+  color: #010c18;
+  font-family: "Cinzel", sans-serif;
+}
+
+
+
+.fieldset {
+  position: absolute;
+  top: 47%; /* Ajusta la posición vertical según sea necesario */
+  left: 45%; /* Coloca el componente en el centro horizontal */
+  transform: translateX(200%); /* Ajusta el centro horizontal */
+  width: 220px; /* Ajusta el ancho según sea necesario */
+  filter: drop-shadow(0 5px 3px rgba(0, 0, 0, 0.5));
+  
+}
+
+#contenedor-reloj,
+#fondo,
+#hora-digital {
+  position: fixed  !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  
+}
+
+#fondo {
+  background: linear-gradient(white, lightgray);
+  border-radius: 50%;
+  border: 15px solid black;
+  filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.5));
+}
+
+#contenedor-reloj,
+#manecillas {
+  position: relative;
+  
+}
+
+#fondo,
+#horas,
+#minutos,
+#segundos,
+#hora-digital,
+#puntos  {
+  position: absolute;
+  
+}
+
+#hora-digital {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+  font-size: 130%;
+  opacity: 0.5;
+  
+}
+
+#manecillas{
+  filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.5));
+  
+} 
   h1{
     text-align: center;
     margin: 80px 0 20px 0;
@@ -27,136 +185,8 @@
     text-align: center;
     border-radius: 5px;
     padding: 10px 30px;
+  
   }
-  #reloj{
-    font-size: 4em;
-    color: rgb(255, 255, 255);
-  }
-
-.contenedor {
-    width: 80%;
-    margin: 20px auto;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.label1 {
-    margin-top:10px;
-    font-family: Arial, sans-serif;
-    padding: 15px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(8%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-
-.label2{
-    font-family: Arial, sans-serif;
-    margin-top:30px;
-    padding: 15px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(20%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.label3 {
-    font-family: Arial, sans-serif;
-    margin-top:30px;
-    padding: 15px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(12%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.label4 {
-    margin-top:30px;
-    padding: 15px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(9%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.label5 {
-    margin-top:30px;
-    padding: 15px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(20%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.contenedor {
-
-    margin-left: auto
-  }
-
-.separator{
- text-align: center;
- margin-top:10px;
-
-}
-
-
-.containerform {
-    margin-top:30px; /* Ejemplo de margen superior para separarla de la sección anterior */
-
-}
-
-.nueva-division {
-    /* Estilos adicionales para la nueva división */
-    margin-top: 20px; /* Ejemplo de margen superior para separarla de la sección anterior */
-    flex-direction: row; /* Asegura que los elementos estén en fila (horizontal) */
-    display: inline-block;
-}
-
-.label13 {
-    padding: 10px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(13%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.label14 {
-    padding: 10px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(13%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-
-.label15 {
-    padding: 10px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(11%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.label16 {
-    padding: 10px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(11%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.label17 {
-    padding: 10px;
-    display: inline-block; /* Hace que las etiquetas se comporten como elementos en línea y puedan estar una al lado de la otra */
-    width: calc(11%); /* Asigna un ancho del 50% para ambas etiquetas y resta 5px para el margen entre ellas */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.texto-grande1 {
-    font-size: 18px; /* Puedes ajustar el valor según tus necesidades */
-    font-family: Arial, sans-serif;
-  }
-
-.texto-grande2 {
-    font-size: 22px; /* Puedes ajustar el valor según tus necesidades */
-        font-family: Arial, sans-serif;
-}    
-
 
 
 
