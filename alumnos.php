@@ -58,52 +58,22 @@ if (isset($_POST['buscar'])) {
     <script src="p5.min.js"></script>
 </head>
 
-<body>  
-    <!-- CSS (estilos) -->
-    <link rel="stylesheet" href="css/styles.css">
+<body>
+    
+<link rel="stylesheet" href="css/styles.css">
+   
+    <!-- PENDIENTE    -->
 
-    <div  style="width: 14rem;">   
+    <div  style="width: 45rem; " class="text-center imgga" >   
         <?php
-        echo '<img src="img/galoisimg.png" alt="Descripción de la imagen" width="20">';
+        echo '<img src="img/newgaloisimg.png" alt="Descripción de la imagen">';
         ?>
-        <h2 class="h2f">EVARISTE</h2>
-        <h1 class="h1f" >GALOIS</h1>
-        <h1 class="h1v2" >REGISTRO DE ASISTENCIAS</h1>
     </div>
 
-    <!-- HTML (Estructura) -->
+    <h1 class="h1v2" >REGISTRO DE ASISTENCIAS</h1>
 
-    <div id="contenedor-reloj">
-        <!-- Se va a trabajar con multiples capas -->
-        <div id="fondo">
-        </div>
-        <div id="hora-digital">
-            <span id="texto-hora-digital">Cargando...</span>
-        </div>
-        <div id="manecillas">
-            <svg id="puntos" width="300" height="300">
-            </svg>
-            <div id="horas">
-                <svg width="300" height="300">
-                    <line x1="150" y1="50" x2="150" y2="150" stroke="black" stroke-width="6" stroke-linecap="round" />
-                </svg>
-            </div>
-            <div id="minutos">
-                <svg width="300" height="300">
-                    <line x1="150" y1="30" x2="150" y2="150" stroke="black" stroke-width="4" stroke-linecap="round" />
-                </svg>
-            </div>
-            <div id="segundos">
-                <svg width="300" height="300">
-                    <line x1="150" y1="30" x2="150" y2="150" stroke="red" stroke-width="2" stroke-linecap="round" />
-                </svg>
-
-            </div>  
-
-        </div>
-
-    </div>
-
+    <div id="clock" class="clock"></div>
+    <script src="js/reloj.js"> </script>
  
 
     <div class="fieldset">    
@@ -118,13 +88,14 @@ if (isset($_POST['buscar'])) {
   <script src="js/ejercicio.js"></script>
 
 
-  <form method="post" class="text-center mb-3 containerform ingre">
-    <label for="dni">INSERTE DNI (8 dígitos)</label>
-    <input type="text" name="dni" id="dni" pattern="[0-9]{8}" title="El DNI debe tener 8 dígitos" oninput="checkLength()" required>
-    <button class="btn btn-primary" type="submit" name="buscar" id="buscarBtn" style="display:none;">Buscar</button>
-</form>
+    <form method="post" >
+        <h3 class="h3dnipost" ><strong>DNI : </strong><h3>
+        <input  style="width: 18rem;" class="h4dnitextpost" type="text" name="dni" id="dni" pattern="[0-9]{8}" title="El DNI debe tener 8 dígitos" oninput="checkLength()" >
+        <button class="btn btn-primary" type="submit" name="buscar" id="buscarBtn" style="display:none;"></button>
 
-<script>
+    </form>
+    
+    <script>
     function checkLength() {
         var dniInput = document.getElementById('dni');
         var buscarBtn = document.getElementById('buscarBtn');
@@ -145,14 +116,12 @@ if (isset($_POST['buscar'])) {
         } else {
             foreach ($resultados as $resultado) {
         ?>
-                <h3 class="h3dni"><strong>DNI : </strong><h4>
-                
-                <h4 class="h4dni"><?php echo $resultado['dni']; ?></h4>
+                <h4 class="h3dni"><?php echo $resultado['dni']; ?></h4>   
                 <h4 class="h3alum" ><strong>ALUMNO : </strong><h4>
                     <h4 class="h4alum"><?php echo $resultado['apenom']; ?></h4>
-                </div>
 
                 <h3 class="h3gra"><strong>GRADO : </strong></h3>
+                <h3 class="h3sec"  ><strong>SECCIÓN : </strong></h3>
                 <h4 class="h4gra">
                     <?php 
                         $grado = $resultado['grado'];
@@ -178,11 +147,10 @@ if (isset($_POST['buscar'])) {
                         }
                     ?>
                 </h4>
-                <h3 class="h3sec"  ><strong>SECCIÓN : </strong></h3>
-                <h4 class="h4sec">"<?php echo $resultado['seccion']; ?>"</h4>
-                </div>
 
-                <div class="imgh" style="width: 14rem;">
+                <h4 class="h4sec">"<?php echo $resultado['seccion']; ?>"</h4>
+
+                <div class="imgh" style="width: 16rem;">
                 <img src="<?php echo $resultado['img'] ?>" class="card-img-top" alt="...">
                 <button class="btn btn-primary asistio" data-idalum="<?php echo $resultado['id']; ?>" id="buscarBtn1" style="display:none;">asitencia</button>
                 </div>
@@ -191,16 +159,15 @@ if (isset($_POST['buscar'])) {
         }
     }
     ?>
-
             <script>
                 function limpiarResultados() {
                     buscarBtn1.click();
-                    var resultadosContainer = document.getElementById('resultadosContainer');
-                    resultadosContainer.style.display = 'none';
+                    document.getElementById('resultadosContainer').innerHTML = '';
                 }
 
                 setTimeout(limpiarResultados, 5000); // 5000 milisegundos = 5 segundos
             </script>
+
 
             <script>
                 $(document).ready(function(){

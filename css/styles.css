@@ -4,189 +4,128 @@
 }
 
 body {   
-  font-family:Verdana;
-  color: #010c18;
-  font-family: "Cinzel", sans-serif;
 
-}
-
-.h1f{
-  margin: 50px -328px 20px 10px;
   color: #010c18;
   font-family: "Cinzel", sans-serif;
 }
+
+.clock{
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #243358;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  margin: -222px 930px -20px 20px;
+}
+
+.imgga{
+  margin: -29px 10px 100px 310px; 
+}
+
+.h3dnipost{
+  margin: 125px 910px 0px 260px;
+  color:  #243358;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2rem;  
+}
+
+.h4dnitextpost{
+  
+  margin: 10px 0px 0px 280px;
+  color:  #243358;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2rem;  
+}
+
+
+.fieldset {
+  text-align: center;
+  margin: -92px 14px 50px 950px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #243358;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+
 
 .h1v2{
-  margin: -100px -728px 30px 400px;
-  color: #010c18;
+  margin: -80px -528px 0px -450px;
+  color:  #243358;
   font-family: "Cinzel", sans-serif;
-  font-size: 4.5em;
+  font-size: 2.8em;
+  text-align: center;
 }
 
 .h3dni{
-  margin:  30px -728px 300px 100px;
-  color: #010c18;
+  margin:  -38px -728px 0px 350px;
+  color: #243358;
   font-family: "Cinzel", sans-serif;
-  font-size: 3em;  
+  font-size: 2rem;
 }
 
-.h4dni{
-  margin: -353px -728px 300px 250px;
-  color: #02254b;
-  font-family: "Cinzel", sans-serif;
-  font-size: 2.5em;
-}
 
 .h3alum{
-  margin:  -260px -728px 280px 90px;
-  color: #010c18;
+  margin: 20px 850px 0px 254px;
+  color:  #243358;
   font-family: "Cinzel", sans-serif;
-  font-size: 2.7em;
+  font-size: 2rem;
 }
 
 .h4alum{
-  margin: -330px 550px 300px 340px;
-  color:  #02254b;
+  margin: 10px 565px 0px 280px;
+  color:  #243358;
   font-family: "Cinzel", sans-serif;
-  font-size: 2.4em;
+  font-size: 2rem;
 }
 
 .h3gra{
-  margin:  -260px -728px 290px 90px;
-  color: #010c18;
+  margin:  15px -728px 0px 250px;
+  color: #243358;
   font-family: "Cinzel", sans-serif;
-  font-size: 2.3em;
+  font-size: 2rem;
 }
 
 .h4gra{
-  margin: -327px 600px 300px 280px;
-  color:  #02254b;
+  margin: 20px 600px 0px 280px;
+  color: #243358;
   font-family: "Cinzel", sans-serif;
-  font-size: 2.0em;
+  font-size: 2rem;
 }
 
 .h3sec{
-  margin:  -343px 100px 305px 450px;
-  color: #010c18;
+  margin:  -37px 100px 0px 550px;
+  color: #243358;
   font-family: "Cinzel", sans-serif;
-  font-size: 2.3em;
+  font-size: 2rem;
 
 }
 
 .h4sec{
-  margin: -345px 600px 300px 680px;
-  color:  #02254b;
+  margin: -38px 600px 0px 600px;
+  color:  #243358 ;
   font-family: "Cinzel", sans-serif;
-  font-size: 2.0em;
+  font-size: 2rem;
 
 }
 
 .imgh{
-  margin: -580px 600px 300px 810px;
+  margin: -320px 600px 0px 810px;
   color:  #02254b;
   font-family: "Cinzel", sans-serif;
   font-size: 2.4em;
   border: 1px solid #000;
 }
 
-.ingre{
-  color:  #02254b;
-  font-family: "Cinzel", sans-serif;
-  font-size: 1.4em;
-}
 
 
-
-.h2f{
-
-  margin: -160px 0px -55px 200px;
-  color: #010c18;
-  font-family: "Cinzel", sans-serif;
-}
-
-
-
-.fieldset {
-  position: absolute;
-  top: 47%; /* Ajusta la posición vertical según sea necesario */
-  left: 45%; /* Coloca el componente en el centro horizontal */
-  transform: translateX(200%); /* Ajusta el centro horizontal */
-  width: 220px; /* Ajusta el ancho según sea necesario */
-  filter: drop-shadow(0 5px 3px rgba(0, 0, 0, 0.5));
-  
-}
-
-#contenedor-reloj,
-#fondo,
-#hora-digital {
-  position: fixed  !important;
-  top: 0 !important;
-  right: 0 !important;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  
-}
-
-#fondo {
-  background: linear-gradient(white, lightgray);
-  border-radius: 50%;
-  border: 15px solid black;
-  filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.5));
-}
-
-#contenedor-reloj,
-#manecillas {
-  position: relative;
-  
-}
-
-#fondo,
-#horas,
-#minutos,
-#segundos,
-#hora-digital,
-#puntos  {
-  position: absolute;
-  
-}
-
-#hora-digital {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 150px;
-  font-size: 130%;
-  opacity: 0.5;
-  
-}
-
-#manecillas{
-  filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.5));
-  
-} 
-  h1{
-    text-align: center;
-    margin: 80px 0 20px 0;
-    color: white;
-  }
-  #subtitulo{
-    text-align: center;
-    margin-bottom: 80px;
-    color: white;
-  }
-  legend{
-    font-size: 1.7em;
-    padding: 0 7px;
-  }
-  fieldset{
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px 30px;
-  
-  }
 
 
 
